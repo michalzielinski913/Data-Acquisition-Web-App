@@ -1,0 +1,35 @@
+ <h2>Create Answer</h2>
+   <p>{{ total }}</p>
+    <p>{{ new }}</p>
+   <p>{{ accepted }}</p>
+    <p>{{ rejected }}</p>
+
+  <form method="post">
+    {% csrf_token %}
+     <p>
+    <label for="id_text">Text:</label>
+    <textarea name="text" cols="40" rows="10" required id="id_text">
+</textarea>
+
+
+  </p>
+
+
+  <p>
+    <label for="id_title">Title:</label>
+    <input type="text" name="title" maxlength="64" id="id_title">
+
+
+  </p>
+
+
+  <p>
+    <label for="id_wants_contact">Wants contact:</label>
+    <input type="checkbox" name="wants_contact" id="id_wants_contact">
+
+
+
+
+  </p>
+    <button type="submit">Submit</button>
+  </form>
